@@ -71,7 +71,10 @@ module "alb" {
     {
       port               = 80
       protocol           = "HTTP"
+
+      forward = {
       target_groups_index = 0
+      }
     }
   ]
 
