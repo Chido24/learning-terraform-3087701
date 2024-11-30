@@ -64,7 +64,7 @@ module "alb" {
       backend_protocol = "HTTP"
       backend_port     = 80
       target_type      = "instance"
-      target_id        = aws_instance.blog_id
+      target_id        = data.aws_instance.blog.instance_id
     }
   }
 
